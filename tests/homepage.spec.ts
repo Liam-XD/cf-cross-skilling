@@ -1,19 +1,19 @@
 import { test, expect } from "@playwright/test";
+import { HomePage } from "../pages/HomePage.ts";
+
+let homePage: HomePage;
 
 test.beforeEach(async ({ page }) => {
-  console.log("Before running each test...");
-  await page.goto("https://automationintesting.online/");
+  homePage = new HomePage(page);
+  await homePage.gotoHome();
 });
 
-test.describe("Homepage Hero Section Verification", () => {
+test.describe("Hero Section Verification", () => {
   test("Should load the homepage and display all hero section elements", async ({
     page,
   }) => {
     await test.step("Load page and verify status code", async () => {
-      // Navigate to the URL and capture the response
-      const response = await page.goto("https://automationintesting.online/");
-      // Assert that the response is not null and the status is 200 (OK)
-      expect(response?.status()).toBe(200);
+      await homePage.assertStatus(200);
     });
 
     await test.step("Verify page title is correct", async () => {
@@ -39,38 +39,40 @@ test.describe("Homepage Hero Section Verification", () => {
   });
 });
 
-// test.describe("Verify page load status and hero section elements", () => {
-//   test("should load the page and return a 200 status code", async ({
-//     page,
-//   }) => {
-//     // Navigate to the URL and capture the response
-//     const response = await page.goto("https://automationintesting.online/");
+test.describe("Booking Section Verification", () => {
+  test("Verify Booking card elements & functionality2", async ({ page }) => {
+    await test.step("Verify Card Heading", async () => {
+      await expect(
+        page.getByRole("heading", { name: "Check Availability & Book" })
+      ).toBeVisible();
+      await page.pause();
+    });
 
-//     // Assert that the response is not null and status is 200
-//     expect(response && response.status()).toBe(200);
-//   });
+    await test.step("Verify Check-in and Check-out fields", async () => {
+      await expect(page.getByText("Check In")).toBeVisible();
+      await expect(page.getByText("Check Out")).toBeVisible();
+      await expect(
+        page
+          .locator("div")
+          .filter({ hasText: /^Check In$/ })
+          .getByRole("textbox")
+      ).toBeVisible();
+      await expect(
+        page
+          .locator("div")
+          .filter({ hasText: /^Check Out$/ })
+          .getByRole("textbox")
+      ).toBeVisible();
+    });
 
-//   test("heading present", async ({ page }) => {
-//     // Expect a heading "to be present with expected wording
-//     await expect(
-//       page.getByRole("heading", { name: "Welcome to Shady Meadows B&B" })
-//     ).toBeVisible();
-//   });
-
-//   test.only("homepage hero image should be present", async ({ page }) => {
-//     const heroImage = page.locator("section.hero");
-//     //make sure hero image is visible
-//     await expect(heroImage).toBeVisible();
-//     //make sure css has correct image URL
-//     await expect(heroImage).toHaveCSS(
-//       "background-image",
-//       /url\(.*\/images\/rbp-logo\.jpg"\)/
-//     );
-//   });
-
-//   test("'Book Now' button present", async ({ page }) => {
-//     // Expect 'Book Now' button to be present
-//     expect(page.getByRole("link", { name: "Book Now", exact: true }))
-//       .toBeVisible;
-//   });
-// });
+    await test.step("Verify 'Check Availability' button is present and clickable", async () => {
+      await page.pause();
+      await expect(
+        page.getByRole("button", { name: "Check Availability" })
+      ).toBeVisible();
+      await expect(
+        page.getByRole("button", { name: "Check Availability" })
+      ).toBeEnabled();
+    });
+  });
+});

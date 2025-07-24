@@ -8,7 +8,7 @@
 - [Requirements](#Requirements)
 - [Usage](#Usage)
 - [Contribution](#Contribution)
-- [Future improvements](#Future Improvements)
+- [Future improvements](#Future-Improvements)
 
 ## Motivation
 
@@ -52,13 +52,15 @@ npx playwright test
 
 ### Expected failures
 
-Tests which we expect to fail, due to identified broken functionality on the website, have been marked with test.fail()
+Tests which we expect to fail, due to identified broken functionality on the website, have been marked with `test.fail()`
+
 This will ensure the test is actually failing and therefore return it as 'passed'.
 More info: https://playwright.dev/docs/api/class-test#test-fail
 
 ### Skipped tests
 
-Tests where the functionality is not yet implemented on the website have been marked with test.skip()
+Tests where the functionality is not yet implemented on the website have been marked with `test.skip()`
+
 This will ensure Playwright does not run the script and instead returns is as 'skipped' in the reporting.
 More info: https://playwright.dev/docs/api/class-test#test-skip
 
@@ -68,6 +70,10 @@ Contributions and feedback are welcome, although I expect this to be a solo proj
 As such, I've added branch protection.
 Commits must therefore be made on a non-protected branch (basically not on main) and submitted via a pull request.
 As code owner I can then review and include in the main branch upon approval.
+
+Specific points in the repositories history have been tagged using the git tagging functionality. tonhgihlight when key updates have been made:
+
+![Image of repositories taggin history](image.png)
 
 ## Future Improvements
 
@@ -79,4 +85,4 @@ I would also like to write tests for...
 - Admin login
 - API calls
 
-_Watch this space!_
+_**Watch this space!**_

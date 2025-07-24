@@ -69,7 +69,7 @@ test.describe("Navigation bar Tests", () => {
   test("Rooms link should navigate to Rooms section", async ({ page }) => {
     await expect(homePage.roomsHeading).not.toBeInViewport();
     await homePage.roomsNavLink.click();
-    await helper.waitForScrollEnd(page);
+    await helper.waitForScrollEnd();
     await expect(page).toHaveURL("https://automationintesting.online/#rooms");
     await expect(homePage.roomsHeading).toBeInViewport();
   });
@@ -82,7 +82,7 @@ test.describe("Navigation bar Tests", () => {
         homePage.bookingAvailabilityCardHeading
       ).not.toBeInViewport();
       await homePage.bookingNavLink.click();
-      await helper.waitForScrollEnd(page);
+      await helper.waitForScrollEnd();
       await expect(page).toHaveURL(
         "https://automationintesting.online/#booking"
       );
@@ -103,7 +103,7 @@ test.describe("Navigation bar Tests", () => {
   }) => {
     await expect(homePage.locationHeading).not.toBeInViewport();
     await homePage.locationNavLink.click();
-    await helper.waitForScrollEnd(page);
+    await helper.waitForScrollEnd();
     await expect(page).toHaveURL(
       "https://automationintesting.online/#location"
     );
@@ -115,7 +115,7 @@ test.describe("Navigation bar Tests", () => {
   }) => {
     await expect(homePage.contactFormHeading).not.toBeInViewport();
     await homePage.contactNavLink.click();
-    await helper.waitForScrollEnd(page);
+    await helper.waitForScrollEnd();
     await expect(page).toHaveURL("https://automationintesting.online/#contact");
     await expect(homePage.contactFormHeading).toBeInViewport();
   });

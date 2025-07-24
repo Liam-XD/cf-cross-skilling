@@ -10,8 +10,8 @@ export class CommonHelpers {
 
   // --- Actions & Assertions ---
 
-  async waitForScrollEnd(page: Page, timeout: number = 150) {
-    await page.evaluate(
+  async waitForScrollEnd(timeout: number = 150) {
+    await this.page.evaluate(
       (scrollTimeout) => {
         return new Promise((resolve) => {
           let timeoutId: NodeJS.Timeout;

@@ -4,11 +4,16 @@
 
 ## Table of Contents
 
-- [Motivation](#Motivation)
-- [Requirements](#Requirements)
-- [Usage](#Usage)
-- [Contribution](#Contribution)
-- [Future improvements](#Future-Improvements)
+- [Motivation](#motivation)
+- [Requirements](#requirements)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Running tests](#running-tests)
+  - [Expected failures](#expected-failures)
+  - [Skipped tests](#skipped-tests)
+  - [Github Actions](#github-actions)
+- [Contribution](#contribution)
+- [Future Improvements](#future-improvements)
 
 ## Motivation
 
@@ -80,6 +85,12 @@ Tests where the functionality is not yet implemented on the website have been ma
 
 This will ensure Playwright does not run the script and instead returns is as 'skipped' in the reporting.
 More info: https://playwright.dev/docs/api/class-test#test-skip
+
+### Github Actions
+
+A basic Github Actions workflow has been added to this repository. This workflow will install any dependencies, the playwright browsers and then run the tests.
+
+The results of this workflow can be viewed under the 'Actions' tab within GitHub.
 
 ## Contribution
 

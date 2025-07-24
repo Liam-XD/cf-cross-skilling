@@ -21,22 +21,30 @@ This repo uses Playwright to test this website that contains both working functi
 ## Requirements
 
 This repo is currently known to work with the following minimum requirements
-Node v18.20.2
-Npm 10.5.0
-Playwright@1.53.2
+
+- Node v18.20.2
+- Npm 10.5.0
+- Playwright@1.53.2
 
 Using the command line interpreter 'Bash' you can check the versions of each as follows:
-Node: node -v
-Npm: npm -v
-Playwright: npm list playwright
+
+- Node: node -v
+- Npm: npm -v
+- Playwright: npm list playwright
 
 ### Installation
 
 1. Clone the repository
-   git clone https://github.com/Liam-XD/cf-cross-skilling.git
+   `git clone https://github.com/Liam-XD/cf-cross-skilling.git`
 2. Navigate to the project directory:
    cd <your-project-directory>
 3. Install the dependencies mentioned above
+
+Npm comes with the installation of Node.js. The recommended approach to installing them is to visit the official website and follow the most appropraite path from there:
+https://nodejs.org/en
+
+Once npm is installed, Playwright can be installed using the following command:
+`npm init playwright@latest`
 
 ## Usage
 
@@ -47,8 +55,13 @@ Smoke tests for:
 - Check availability section
 - Navigation bar functionality
 
-All tests can be run with the following command:
-npx playwright test
+### Running tests
+
+Copmmand shortcuts have been setup within the 'scripts' section of the packackage.json file.
+To run the tests locally, use the following commands:
+`npm run test` - Will run all tests headless
+`npm run test:headed` - Will run all tests in the browser
+`npm run test:ui` - Will launch the tests in UI mode for exploring and debugging tests.
 
 ### Expected failures
 
@@ -73,7 +86,7 @@ As code owner I can then review and include in the main branch upon approval.
 
 Specific points in the repositories history have been tagged using the git tagging functionality. tonhgihlight when key updates have been made:
 
-![Image of repositories taggin history](image.png)
+![Image of repository tagging history](media/git-tagging-history.png)
 
 ## Future Improvements
 

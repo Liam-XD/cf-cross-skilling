@@ -70,7 +70,7 @@ To run the tests locally, use the following commands:
 - `npm run test:headed` - Will run all tests in the browser
 - `npm run test:ui` - Will launch the tests in UI mode for exploring and debugging tests.
 
-To see the test report, either click the provided link in the terminal or type the following:
+To see the test report, either click the provided link in the terminal or type the following:  
 `npm run report` - Will open up the latest test report.
 
 ### Expected failures

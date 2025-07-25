@@ -25,7 +25,7 @@ This repo uses Playwright to test this website that contains both working functi
 
 ## Requirements
 
-This repo is currently known to work with the following minimum requirements
+This repo is currently known to work with the following minimum requirements:
 
 - Node v18.20.2
 - Npm 10.5.0
@@ -45,7 +45,7 @@ Using the command line interpreter 'Bash' you can check the versions of each as 
    cd <your-project-directory>
 3. Install the dependencies mentioned above
 
-Npm comes with the installation of Node.js. The recommended approach to installing them is to visit the official website and follow the most appropraite path from there:
+Npm comes with the installation of Node.js. The recommended approach to installing them is to visit the official website and follow the most appropraite path from there:  
 https://nodejs.org/en
 
 Once npm is installed, Playwright can be installed using the following command:
@@ -65,9 +65,10 @@ Smoke tests for:
 Copmmand shortcuts have been setup within the 'scripts' section of the packackage.json file.
 
 To run the tests locally, use the following commands:
-`npm run test` - Will run all tests headless
-`npm run test:headed` - Will run all tests in the browser
-`npm run test:ui` - Will launch the tests in UI mode for exploring and debugging tests.
+
+- `npm run test` - Will run all tests headless
+- `npm run test:headed` - Will run all tests in the browser
+- `npm run test:ui` - Will launch the tests in UI mode for exploring and debugging tests.
 
 To see the test report, either click the provided link in the terminal or type the following:
 `npm run report` - Will open up the latest test report.

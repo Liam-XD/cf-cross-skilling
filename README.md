@@ -4,19 +4,19 @@
 
 ## Table of Contents
 
-- [Motivation](#motivation-💪)
-- [Getting Started](#getting-started-📄)
+- [Motivation](#motivation)
+- [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
-- [Usage](#usage-🧐)
+- [Usage](#usage)
   - [Running tests](#running-tests)
   - [Expected failures](#expected-failures)
   - [Skipped tests](#skipped-tests)
-- [Github Actions](#github-actions-📠)
-- [Contribution](#contribution-🤝)
-- [Future Improvements](#future-improvements-🔮)
+- [Github Actions](#github-actions)
+- [Contribution](#contribution)
+- [Future Improvements](#future-improvements)
 
-## Motivation 💪
+## Motivation
 
 As part of the Quality Engineering cross-skilling plan, we have been tasked with upskilling into the Automation capability.  
 To achieve this and to showcase my skills, I've chosen the following site that will allow me to write UI smoke tests, functional tests and API tests.
@@ -26,7 +26,7 @@ To achieve this and to showcase my skills, I've chosen the following site that w
 This repo uses the Playwright testing framework to test this website.  
 The website itself contains both working functionality and bugs. This will allow for the demonstration of my testing strategy, including how failed tests are handled and reported.
 
-## Getting Started 📄
+## Getting Started
 
 ### Prerequisites
 
@@ -58,7 +58,7 @@ Once npm & node are installed, we can focus on setting up our project.
 
 That should be it! You should now be able to run the Playwright scripts as per the below commands listed under [running tests](#running-tests)
 
-## Usage 🧐
+## Usage
 
 Currently there are tests written for the following areas...  
 Smoke tests for:
@@ -95,7 +95,7 @@ Tests where the functionality is not yet implemented on the website have been ma
 This will ensure Playwright does not run the script and instead returns is as 'skipped' in the reporting.  
 More info [here](https://playwright.dev/docs/api/class-test#test-skip).
 
-## Github Actions 📠
+## Github Actions
 
 A basic Github Actions workflow has been configured on this repository (.github/workflows/playwright.yml). This workflow will be triggered on every push and pull_request to the main branch.  
 This workflow will...
@@ -107,7 +107,7 @@ This workflow will...
 
 The results of this workflow can be viewed under the 'Actions' tab within GitHub.
 
-## Contribution 🤝
+## Contribution
 
 Contributions and feedback are welcome, although I expect this to be a solo project!  
 As such, I've added branch protection.  
@@ -117,7 +117,7 @@ Specific points in the repositories history have been tagged using the git taggi
 
 ![Image of repository tagging history](media/git-tagging-history.png)
 
-## Future Improvements 🔮
+## Future Improvements
 
 This is only the beginning for the repository.
 While some smoke tests have been written, not all areas have been covered.

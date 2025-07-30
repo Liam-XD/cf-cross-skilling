@@ -25,6 +25,7 @@ To achieve this and to showcase my skills, I've chosen the following site that w
 
 This repo uses the Playwright testing framework to test this website.  
 The website itself contains both working functionality and bugs. This will allow for the demonstration of my testing strategy, including how failed tests are handled and reported.
+<br></br><br></br>
 
 ## Getting Started
 
@@ -42,6 +43,7 @@ Using the command line interpreter 'Bash' you can check the versions of each as 
 
 If you do not have these installed, the recommended approach to installing them is to visit the [official Node.js website](https://nodejs.org/en) and follow the most appropraite path from there.  
 _Note: Npm comes with the installation of Node.js._
+<br></br>
 
 ### Setup
 
@@ -57,6 +59,7 @@ Once npm & node are installed, we can focus on setting up our project.
    `npx playwright install`
 
 That should be it! You should now be able to run the Playwright scripts as per the below commands listed under [running tests](#running-tests)
+<br></br><br></br>
 
 ## Usage
 
@@ -66,6 +69,7 @@ Smoke tests for:
 - Hero section
 - Check availability section
 - Navigation bar functionality
+  <br></br>
 
 ### Running tests
 
@@ -80,6 +84,7 @@ To run the tests locally, use the following commands:
 To see the test report, either click the provided link in the terminal or type the following:
 
 - `npm run report` - Will open up the latest test report.
+  <br></br>
 
 ### Expected failures
 
@@ -87,6 +92,7 @@ Tests which we expect to fail, due to identified broken functionality on the web
 
 This will ensure the test is actually failing and therefore return it as 'passed'.  
 More info [here](https://playwright.dev/docs/api/class-test#test-fail).
+<br></br>
 
 ### Skipped tests
 
@@ -94,10 +100,11 @@ Tests where the functionality is not yet implemented on the website have been ma
 
 This will ensure Playwright does not run the script and instead returns is as 'skipped' in the reporting.  
 More info [here](https://playwright.dev/docs/api/class-test#test-skip).
+<br></br><br></br>
 
 ## Github Actions
 
-A basic Github Actions workflow has been configured on this repository (.github/workflows/playwright.yml). This workflow will be triggered on every push and pull_request to the main branch.  
+A basic Github Actions workflow has been configured on this repository (.github/workflows/playwright.yml). This workflow will be triggered on every `push` and `pull request` to the main branch.  
 This workflow will...
 
 1. Install Node.js and project dependencies
@@ -106,6 +113,7 @@ This workflow will...
 4. Upload the test report as an artifact.
 
 The results of this workflow can be viewed under the 'Actions' tab within GitHub.
+<br></br><br></br>
 
 ## Contribution
 
@@ -116,6 +124,7 @@ Commits must therefore be made on a non-protected branch (basically not on main)
 Specific points in the repositories history have been tagged using the git tagging functionality, to highlight when key updates have been made:
 
 ![Image of repository tagging history](media/git-tagging-history.png)
+<br></br><br></br>
 
 ## Future Improvements
 

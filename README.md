@@ -54,8 +54,8 @@ Once npm is installed, we can focus on setting up our project.
 
 1. Install project dependencies with the following command:  
    `npm install`
-2. Once project dependencies are installed we can install Playwright. Playwright is already defined in our package.json folder and so you should only have to run the following:  
-   `npx playwright install`
+
+Running this command will include installation of Playwright as it is defined as a dependency within the package.json file, making it ready to use.
 
 That should be it! You should now be able to run the Playwright scripts as per the below commands listed under [running tests](#running-tests)
 
@@ -78,8 +78,9 @@ To run the tests locally, use the following commands:
 - `npm run test:headed` - Will run all tests in the browser
 - `npm run test:ui` - Will launch the tests in UI mode for exploring and debugging tests.
 
-To see the test report, either click the provided link in the terminal or type the following:  
-`npm run report` - Will open up the latest test report.
+To see the test report, either click the provided link in the terminal or type the following:
+
+- `npm run report` - Will open up the latest test report.
 
 ### Expected failures
 

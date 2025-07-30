@@ -4,17 +4,17 @@
 
 ## Table of Contents
 
-- [Motivation](#motivation)
-- [Getting Started](#getting-started)
+- [Motivation](#motivation-💪)
+- [Getting Started](#getting-started-📄)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
-- [Usage](#usage)
+- [Usage](#usage-🧐)
   - [Running tests](#running-tests)
   - [Expected failures](#expected-failures)
   - [Skipped tests](#skipped-tests)
-  - [Github Actions](#github-actions)
-- [Contribution](#contribution)
-- [Future Improvements](#future-improvements)
+- [Github Actions](#github-actions-📠)
+- [Contribution](#contribution-🤝)
+- [Future Improvements](#future-improvements-🔮)
 
 ## Motivation 💪
 

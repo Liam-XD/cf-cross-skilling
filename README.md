@@ -23,7 +23,15 @@ https://automationintesting.online/
 
 This repo uses Playwright to test this website that contains both working functionality and known bugs. This will allow for the demonstration of my testing strategy, including how failed tests are handled and reported.
 
-## Requirements
+## Installation
+
+1. Navigate to the folder you wish to store the repository in
+   cd <your-project-directory>
+2. Clone the repository
+   `git clone https://github.com/Liam-XD/cf-cross-skilling.git`
+3. Install the dependencies mentioned above as per the below instructions
+
+### Requirements
 
 This repo is currently known to work with the following minimum requirements:
 
@@ -37,19 +45,19 @@ Using the command line interpreter 'Bash' you can check the versions of each as 
 - Npm: npm -v
 - Playwright: npm list playwright
 
-### Installation
-
-1. Clone the repository
-   `git clone https://github.com/Liam-XD/cf-cross-skilling.git`
-2. Navigate to the project directory:
-   cd <your-project-directory>
-3. Install the dependencies mentioned above
-
 Npm comes with the installation of Node.js. The recommended approach to installing them is to visit the official website and follow the most appropraite path from there:  
 https://nodejs.org/en
 
-Once npm is installed, Playwright can be installed using the following command:
-`npm init playwright@latest`
+### Setup
+
+Once npm is installed, we can focus on setting up our project.
+
+1. Install project dependencies with the following command:  
+   `npm install`
+2. Once project dependencies are installed we can install Playwright. Playwright is already defined in our package.json folder and so you should only have to run the following:  
+   `npx playwright install`
+
+That should be it! You should now be able to run the Playwright scripts as per the below commands listed under [running tests](#running-tests)
 
 ## Usage
 
